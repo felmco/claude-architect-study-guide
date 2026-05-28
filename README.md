@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Future Tells × Claude — Certified Architect Study Guide" width="100%"/>
+  <img src="assets/banner.svg" alt="Future Tales × Claude — Certified Architect Study Guide" width="100%"/>
 </p>
 
 <br/>
@@ -12,12 +12,12 @@
   <img src="https://img.shields.io/badge/Exam-Foundations-CC7A4A?style=flat-square&labelColor=0d1117" alt="Exam Level"/>
   <img src="https://img.shields.io/badge/Questions-52_Practice-FFD966?style=flat-square&labelColor=0d1117" alt="Questions"/>
   <img src="https://img.shields.io/badge/Pass_Score-720%2F1000-4ade80?style=flat-square&labelColor=0d1117" alt="Pass Score"/>
-  <img src="https://img.shields.io/badge/Developed_by-Future_Tells-00AEEF?style=flat-square&labelColor=0d1117" alt="Future Tells"/>
+  <a href="https://futuretales.ai"><img src="https://img.shields.io/badge/Developed_by-Future_Tales-CC7A4A?style=flat-square&labelColor=0d1117" alt="Future Tales"/></a>
 </p>
 
 <br/>
 
-> A complete, hands-on preparation repository for the **Claude Certified Architect – Foundations** certification exam. Every task statement has working Python code, sequence diagrams, and exam-aligned practice questions — built by [Future Tells](https://github.com/felmco).
+> A complete, hands-on preparation repository for the **Claude Certified Architect – Foundations** certification exam. Every task statement has working Python code, sequence diagrams, and exam-aligned practice questions — built by [Future Tales](https://futuretales.ai).
 
 ---
 
@@ -223,7 +223,7 @@ The exam specifically tests these wrong-answer traps:
 
 <p align="center">
   <sub>
-    Developed with ♥ by <strong><a href="https://github.com/felmco">Future Tells</a></strong>
+    Developed with ♥ by <strong><a href="https://futuretales.ai">Future Tales</a></strong>
     &nbsp;·&nbsp;
     Powered by <strong>Anthropic Claude</strong>
     &nbsp;·&nbsp;
