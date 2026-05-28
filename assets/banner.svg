@@ -1,0 +1,308 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" role="img" aria-label="Future Tells × Claude — Certified Architect Study Guide">
+  <defs>
+
+    <!-- Backgrounds -->
+    <linearGradient id="bgMain" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#090d14"/>
+      <stop offset="100%" stop-color="#0c1220"/>
+    </linearGradient>
+
+    <!-- Glow halos -->
+    <radialGradient id="glowFT" cx="23%" cy="48%" r="38%" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#00AEEF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#00AEEF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowCL" cx="77%" cy="48%" r="38%" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#CC7A4A" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#CC7A4A" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Dot grid -->
+    <pattern id="dotGrid" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="14" cy="14" r="0.9" fill="#ffffff" opacity="0.055"/>
+    </pattern>
+
+    <!-- Neon drop shadows -->
+    <filter id="neonBlue" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#00AEEF" flood-opacity="0.75"/>
+    </filter>
+    <filter id="neonOrange" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#CC7A4A" flood-opacity="0.75"/>
+    </filter>
+    <filter id="neonGold" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#FFD966" flood-opacity="0.9"/>
+    </filter>
+    <filter id="softWhite" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="#ffffff" flood-opacity="0.25"/>
+    </filter>
+
+  </defs>
+
+  <!-- ══════════════════════════════════════════════════════
+       BACKGROUND
+  ══════════════════════════════════════════════════════ -->
+  <rect width="900" height="340" fill="url(#bgMain)" rx="18"/>
+  <rect width="900" height="340" fill="url(#dotGrid)" rx="18"/>
+  <rect width="900" height="340" fill="url(#glowFT)"/>
+  <rect width="900" height="340" fill="url(#glowCL)"/>
+  <!-- outer border -->
+  <rect width="900" height="340" fill="none" stroke="#ffffff" stroke-width="1"
+        stroke-opacity="0.07" rx="18"/>
+
+  <!-- Comic corner brackets -->
+  <polyline points="12,26 12,12 26,12"
+            fill="none" stroke="#00AEEF" stroke-width="2.5"
+            stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="874,12 888,12 888,26"
+            fill="none" stroke="#CC7A4A" stroke-width="2.5"
+            stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="12,314 12,328 26,328"
+            fill="none" stroke="#00AEEF" stroke-width="2.5"
+            stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="874,328 888,328 888,314"
+            fill="none" stroke="#CC7A4A" stroke-width="2.5"
+            stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- ══════════════════════════════════════════════════════
+       FUTURE TELLS — Circuit-head logo (left side)
+       Head faces RIGHT; circuit lines extend LEFT.
+       Group origin: translate(58, 48)
+       Head spans group-x 128–218, group-y 35–202
+  ══════════════════════════════════════════════════════ -->
+  <g transform="translate(58,48)" filter="url(#neonBlue)">
+
+    <!-- ── Head silhouette (right-facing profile, stroke only) ── -->
+    <path d="
+      M 152,37
+      C 170,28  192,34  200,50
+      C 207,64  208,80  206,95
+      C 207,102 213,112 218,122
+      C 220,129 217,135 212,140
+      C 216,146 216,154 213,162
+      C 209,170 203,178 197,185
+      C 191,193 182,198 172,202
+      L 164,202
+      L 158,193
+      C 146,180 138,162 133,143
+      C 128,124 128,106 131,88
+      C 134,72  139,58  147,48
+      C 149,44  151,40  152,37
+      Z
+    "
+    fill="none"
+    stroke="#00AEEF"
+    stroke-width="3.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+
+    <!-- ── Circuit traces extending LEFT from the brain area ── -->
+    <!-- Each trace: solid line + endpoint circle + midpoint circle -->
+
+    <!-- Line 1  (y ≈ 86) -->
+    <line x1="131" y1="86"  x2="52"  y2="86"  stroke="#00AEEF" stroke-width="2.8" stroke-linecap="round"/>
+    <circle cx="92"  cy="86"  r="4"   fill="#00AEEF"/>
+    <circle cx="52"  cy="86"  r="6.5" fill="#00AEEF"/>
+
+    <!-- Line 2  (y ≈ 104) -->
+    <line x1="128" y1="104" x2="38"  y2="104" stroke="#00AEEF" stroke-width="2.8" stroke-linecap="round"/>
+    <circle cx="82"  cy="104" r="4"   fill="#00AEEF"/>
+    <circle cx="38"  cy="104" r="6.5" fill="#00AEEF"/>
+
+    <!-- Line 3  (y ≈ 122) -->
+    <line x1="129" y1="122" x2="48"  y2="122" stroke="#00AEEF" stroke-width="2.8" stroke-linecap="round"/>
+    <circle cx="88"  cy="122" r="4"   fill="#00AEEF"/>
+    <circle cx="48"  cy="122" r="6.5" fill="#00AEEF"/>
+
+    <!-- Line 4  (y ≈ 141) -->
+    <line x1="131" y1="141" x2="60"  y2="141" stroke="#00AEEF" stroke-width="2.8" stroke-linecap="round"/>
+    <circle cx="60"  cy="141" r="6.5" fill="#00AEEF"/>
+
+    <!-- Line 5  (y ≈ 159) -->
+    <line x1="135" y1="159" x2="72"  y2="159" stroke="#00AEEF" stroke-width="2.8" stroke-linecap="round"/>
+    <circle cx="72"  cy="159" r="6"   fill="#00AEEF"/>
+
+    <!-- Line 6  (y ≈ 174, shorter) -->
+    <line x1="142" y1="174" x2="88"  y2="174" stroke="#00AEEF" stroke-width="2.8" stroke-linecap="round"/>
+    <circle cx="88"  cy="174" r="5.5" fill="#00AEEF"/>
+
+  </g>
+
+  <!-- Future Tells label -->
+  <text x="205" y="308"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif"
+        font-size="11.5" font-weight="700" fill="#00AEEF"
+        text-anchor="middle" letter-spacing="2.5" opacity="0.88">FUTURE TELLS</text>
+
+  <!-- ══════════════════════════════════════════════════════
+       CENTER SECTION — Book + Titles
+  ══════════════════════════════════════════════════════ -->
+
+  <!-- Dashed bridge lines -->
+  <line x1="318" y1="152" x2="368" y2="152"
+        stroke="#ffffff" stroke-width="1" stroke-opacity="0.12" stroke-dasharray="4,4"/>
+  <line x1="532" y1="152" x2="582" y2="152"
+        stroke="#ffffff" stroke-width="1" stroke-opacity="0.12" stroke-dasharray="4,4"/>
+
+  <!-- Open book (centered at 450, y=88–170) -->
+  <g transform="translate(392,88)">
+    <!-- Left page -->
+    <path d="M 58,6 Q 58,0 4,2 L 2,82 Q 58,80 58,74 Z"
+          fill="#121c2b" stroke="#263548" stroke-width="1.5"/>
+    <!-- Right page -->
+    <path d="M 58,6 Q 58,0 112,2 L 114,82 Q 58,80 58,74 Z"
+          fill="#121c2b" stroke="#263548" stroke-width="1.5"/>
+    <!-- Spine -->
+    <line x1="58" y1="0" x2="58" y2="82"
+          stroke="#2e4460" stroke-width="3"/>
+    <!-- Page base shadow -->
+    <rect x="0" y="78" width="116" height="7" rx="2" fill="#090d14" opacity="0.6"/>
+
+    <!-- Left page lines (blue tones) -->
+    <line x1="10" y1="18" x2="50" y2="18" stroke="#4a9fd4" stroke-width="1.8" stroke-opacity="0.72" stroke-linecap="round"/>
+    <line x1="10" y1="30" x2="50" y2="30" stroke="#4a9fd4" stroke-width="1.8" stroke-opacity="0.50" stroke-linecap="round"/>
+    <line x1="10" y1="42" x2="40" y2="42" stroke="#4a9fd4" stroke-width="1.8" stroke-opacity="0.38" stroke-linecap="round"/>
+    <line x1="10" y1="54" x2="50" y2="54" stroke="#4a9fd4" stroke-width="1.8" stroke-opacity="0.50" stroke-linecap="round"/>
+    <line x1="10" y1="66" x2="34" y2="66" stroke="#4a9fd4" stroke-width="1.8" stroke-opacity="0.30" stroke-linecap="round"/>
+
+    <!-- Right page lines (orange tones) -->
+    <line x1="66" y1="18" x2="106" y2="18" stroke="#CC7A4A" stroke-width="1.8" stroke-opacity="0.72" stroke-linecap="round"/>
+    <line x1="66" y1="30" x2="106" y2="30" stroke="#CC7A4A" stroke-width="1.8" stroke-opacity="0.50" stroke-linecap="round"/>
+    <line x1="66" y1="42" x2="94"  y2="42" stroke="#CC7A4A" stroke-width="1.8" stroke-opacity="0.38" stroke-linecap="round"/>
+    <line x1="66" y1="54" x2="106" y2="54" stroke="#CC7A4A" stroke-width="1.8" stroke-opacity="0.50" stroke-linecap="round"/>
+    <line x1="66" y1="66" x2="88"  y2="66" stroke="#CC7A4A" stroke-width="1.8" stroke-opacity="0.30" stroke-linecap="round"/>
+  </g>
+
+  <!-- Star above book -->
+  <g transform="translate(450,82)" filter="url(#neonGold)">
+    <path d="M0,-8 L1.8,-1.8 L8,0 L1.8,1.8 L0,8 L-1.8,1.8 L-8,0 L-1.8,-1.8 Z"
+          fill="#FFD966"/>
+  </g>
+
+  <!-- Main title -->
+  <text x="450" y="222"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif"
+        font-size="24" font-weight="700" fill="#ffffff"
+        text-anchor="middle" letter-spacing="-0.4"
+        filter="url(#softWhite)">Claude Certified Architect</text>
+
+  <!-- Subtitle -->
+  <text x="450" y="248"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif"
+        font-size="13" font-weight="500" fill="#6b7a8d"
+        text-anchor="middle" letter-spacing="3.8">FOUNDATIONS STUDY GUIDE</text>
+
+  <!-- Attribution pill -->
+  <rect x="318" y="268" width="264" height="30" rx="15"
+        fill="#ffffff" fill-opacity="0.05"
+        stroke="#ffffff" stroke-opacity="0.10" stroke-width="1"/>
+  <text x="450" y="288"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif"
+        font-size="11.5" fill="#8b97a8" text-anchor="middle">
+    <tspan font-weight="700" fill="#00AEEF">Future Tells</tspan>
+    <tspan fill="#4a5568">  ×  </tspan>
+    <tspan font-weight="700" fill="#CC7A4A">Anthropic Claude</tspan>
+  </text>
+
+  <!-- ══════════════════════════════════════════════════════
+       CLAUDE MASCOT — pixel-art character (right side)
+       Group origin: translate(616, 72)
+  ══════════════════════════════════════════════════════ -->
+  <g transform="translate(616,72)" filter="url(#neonOrange)">
+
+    <!-- Graduation cap (character is studying!) -->
+    <!-- Cap brim (flat rectangle) -->
+    <rect x="14" y="2"  width="72" height="11" rx="2" fill="#1a2a3a"/>
+    <!-- Cap top -->
+    <rect x="22" y="-8" width="56" height="12" rx="2" fill="#111d2b"/>
+    <!-- Tassel cord -->
+    <line x1="78" y1="6" x2="92" y2="26"
+          stroke="#CC7A4A" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Tassel bob -->
+    <circle cx="92" cy="30" r="5.5" fill="#CC7A4A"/>
+
+    <!-- Body -->
+    <rect x="8"  y="14" width="88" height="98" rx="7" fill="#C4784C"/>
+
+    <!-- Face panel (slightly lighter) -->
+    <rect x="16" y="22" width="72" height="60" rx="5" fill="#D0835A"/>
+
+    <!-- Left eye -->
+    <rect x="22" y="34" width="22" height="18" rx="3" fill="#160d06"/>
+    <!-- Left eye highlight -->
+    <rect x="25" y="37" width="6"  height="6"  rx="1" fill="#ffffff" opacity="0.42"/>
+
+    <!-- Right eye -->
+    <rect x="60" y="34" width="22" height="18" rx="3" fill="#160d06"/>
+    <!-- Right eye highlight -->
+    <rect x="63" y="37" width="6"  height="6"  rx="1" fill="#ffffff" opacity="0.42"/>
+
+    <!-- Mouth -->
+    <rect x="34" y="66" width="36" height="7" rx="3" fill="#a8623a"/>
+
+    <!-- Side nubs (arms/appendages matching original mascot) -->
+    <rect x="-4"  y="46" width="14" height="12" rx="3" fill="#a8623a"/>
+    <rect x="94"  y="46" width="14" height="12" rx="3" fill="#a8623a"/>
+
+    <!-- Feet (three pairs of rectangles) -->
+    <rect x="16"  y="115" width="16" height="22" rx="3" fill="#a8623a"/>
+    <rect x="44"  y="115" width="16" height="22" rx="3" fill="#a8623a"/>
+    <rect x="72"  y="115" width="16" height="22" rx="3" fill="#a8623a"/>
+
+    <!-- Bracket glyph to the left (iconic Claude detail) -->
+    <text x="-22" y="82"
+          font-family="monospace" font-size="34" font-weight="300"
+          fill="#CC7A4A" opacity="0.65">[</text>
+
+  </g>
+
+  <!-- Claude label -->
+  <text x="665" y="308"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif"
+        font-size="11.5" font-weight="700" fill="#CC7A4A"
+        text-anchor="middle" letter-spacing="2.5" opacity="0.88">CLAUDE</text>
+
+  <!-- ══════════════════════════════════════════════════════
+       DECORATIVE STARS + SPARKLES
+  ══════════════════════════════════════════════════════ -->
+
+  <!-- 4-pointed star helper: inline at each position -->
+  <!-- Left zone stars -->
+  <circle cx="78"  cy="44"  r="2.8" fill="#FFD966" opacity="0.65"/>
+  <circle cx="104" cy="62"  r="1.6" fill="#ffffff"  opacity="0.28"/>
+  <circle cx="56"  cy="230" r="1.8" fill="#FFD966"  opacity="0.45"/>
+
+  <!-- Mid-left zone -->
+  <circle cx="338" cy="66"  r="2.2" fill="#FFD966"  opacity="0.60"/>
+  <g transform="translate(316,95)">
+    <path d="M0,-6 L1.2,-1.2 L6,0 L1.2,1.2 L0,6 L-1.2,1.2 L-6,0 L-1.2,-1.2 Z"
+          fill="#FFD966" opacity="0.52"/>
+  </g>
+
+  <!-- Top center -->
+  <circle cx="450" cy="44"  r="1.8" fill="#FFD966"  opacity="0.50"/>
+
+  <!-- Mid-right zone -->
+  <circle cx="562" cy="68"  r="2.2" fill="#FFD966"  opacity="0.60"/>
+  <g transform="translate(580,98)">
+    <path d="M0,-6 L1.2,-1.2 L6,0 L1.2,1.2 L0,6 L-1.2,1.2 L-6,0 L-1.2,-1.2 Z"
+          fill="#FFD966" opacity="0.52"/>
+  </g>
+
+  <!-- Right zone stars -->
+  <circle cx="824" cy="48"  r="2.8" fill="#FFD966"  opacity="0.65"/>
+  <circle cx="848" cy="68"  r="1.6" fill="#ffffff"   opacity="0.28"/>
+  <circle cx="844" cy="230" r="1.8" fill="#FFD966"   opacity="0.45"/>
+
+  <!-- Plus-cross sparkles -->
+  <g stroke="#FFD966" stroke-width="1.6" stroke-opacity="0.55" stroke-linecap="round">
+    <line x1="355" y1="114" x2="355" y2="124"/>
+    <line x1="350" y1="119" x2="360" y2="119"/>
+
+    <line x1="543" y1="116" x2="543" y2="126"/>
+    <line x1="538" y1="121" x2="548" y2="121"/>
+
+    <line x1="860" y1="140" x2="860" y2="150"/>
+    <line x1="855" y1="145" x2="865" y2="145"/>
+  </g>
+
+</svg>
