@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "study-tools": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["domain-2-tool-design-mcp/2_4_mcp_integration/server.py"],
+      "env": {
+        "API_KEY": "${ANTHROPIC_API_KEY:-not-set}",
+        "LOG_LEVEL": "${LOG_LEVEL:-INFO}"
+      }
+    }
+  }
+}

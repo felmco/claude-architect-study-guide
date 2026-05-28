@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["findings", "summary"],
+  "properties": {
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["severity", "file", "line", "issue", "suggested_fix"],
+        "properties": {
+          "severity": {
+            "type": "string",
+            "enum": ["critical", "high", "medium", "low"]
+          },
+          "file": {
+            "type": "string",
+            "description": "Relative file path"
+          },
+          "line": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "issue": {
+            "type": "string",
+            "description": "Description of the issue"
+          },
+          "suggested_fix": {
+            "type": "string",
+            "description": "Concrete fix suggestion"
+          },
+          "detected_pattern": {
+            "type": ["string", "null"],
+            "description": "Code pattern that triggered this finding (for false positive tracking)"
+          },
+          "is_new": {
+            "type": "boolean",
+            "default": true,
+            "description": "True if not present in prior review findings"
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "string",
+      "description": "Brief summary: X critical, Y high findings. Merge recommendation."
+    },
+    "merge_recommendation": {
+      "type": "string",
+      "enum": ["block", "approve_with_notes", "approve"]
+    }
+  }
+}

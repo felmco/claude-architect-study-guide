@@ -1,0 +1,79 @@
+name: Claude Code Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  claude-review:
+    name: Automated Code Review
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for diff analysis
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Get changed files
+        id: changed-files
+        run: |
+          git diff --name-only origin/${{ github.base_ref }}...HEAD > changed_files.txt
+          echo "Changed files:"
+          cat changed_files.txt
+
+      - name: Get prior review findings (for deduplication)
+        id: prior-findings
+        run: |
+          # Fetch existing PR comments to avoid duplicate findings
+          gh pr view ${{ github.event.pull_request.number }} \
+            --json comments --jq '.comments[].body' \
+            > prior_review_comments.txt 2>/dev/null || echo "" > prior_review_comments.txt
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Run Claude Code review
+        id: review
+        run: |
+          # KEY: -p flag for non-interactive mode (Exam Q10 — correct answer: A)
+          # Without -p, Claude Code waits for interactive input and the job hangs
+          claude -p "
+            Review the following changed files for security issues, bugs, and logic errors.
+
+            CHANGED FILES:
+            $(cat changed_files.txt)
+
+            PRIOR REVIEW FINDINGS (from previous commits on this PR):
+            $(cat prior_review_comments.txt)
+
+            INSTRUCTIONS:
+            1. Analyze ONLY the changed files listed above
+            2. Report ONLY new issues or issues from prior findings that are still unresolved
+            3. Do NOT report issues that appear in prior findings and are already fixed
+            4. Skip: minor style, naming preferences, theoretical risks without realistic attack vector
+
+            OUTPUT: Return JSON matching the schema. Do not include markdown or prose.
+          " \
+          --output-format json \
+          --json-schema review_schema.json \
+          > review_output.json
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Post review as PR comment
+        if: always()
+        run: |
+          # Parse the JSON output and post as inline PR comments
+          python3 post_review_comments.py \
+            --review review_output.json \
+            --pr ${{ github.event.pull_request.number }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      # Context isolation: use a FRESH Claude instance for review
+      # (not the same session that generated the code)
+      # Exam: Same session retains reasoning context → less likely to catch own errors
+      # A separate CI invocation = independent review instance
